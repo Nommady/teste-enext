@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#root{
+    height: 600px;
+    border: solid 2px red;
+    display: flex;
+    padding: 10px;
+}
+/* seletores */
+#aside{
+    border: solid 2px red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 100%;
+    position: relative;
+}
+#aside h3{
+    font-weight: 500;
+    padding: 10px;
+}
+#aside input{
+    width: 100%;
+    padding: 10px;
+}
+#aside button{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;  
+}
+#aside select{
+    padding: 10px;
+    font-size: large;
+}
+/* compenente principal */
+#principal{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    flex: 1;
+}
+#principal h2{
+    margin: 10px;
+}
