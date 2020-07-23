@@ -11,7 +11,6 @@ axios.get('https://dog.ceo/api/breeds/list/all')
 
         for (let i = 0; i < racas.length; i++) {
             opcao = document.createElement('option')
-            opcao.value = `Raça ${racas[i]}`
             let itemDaLista = racas[i]
             opcao.innerText = itemDaLista
             selectRacas.append(opcao)
