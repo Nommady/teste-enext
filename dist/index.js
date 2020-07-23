@@ -21,6 +21,8 @@ function salvarValores(){
     let cor = localStorage.getItem('Cor')
     let raca = localStorage.getItem('Raça')
     raca = raca.toLowerCase()
+    raca = raca.split(" ")
+
 
     let setNome = document.getElementById('nome')
 
@@ -28,7 +30,7 @@ function salvarValores(){
     setNome.style.color = cor 
     setNome.innerText = nome
 
-    axios.get(`https://dog.ceo/api/breed/${raca}/images`)
+    axios.get(`https://dog.ceo/api/breed/${raca[1]}/images`)
         .then(resp=>{
             img = resp.data.message[0]
             imagem = document.getElementById('image')

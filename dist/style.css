@@ -3,23 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
 #root{
-    height: 600px;
-    border: solid 2px red;
+    height: 700px;
     display: flex;
     padding: 10px;
+    background-color: #eeeeee;
 }
 /* seletores */
 #aside{
-    border: solid 2px red;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 200px;
     height: 100%;
     position: relative;
+    background-color: #8fdbe9;
+    border-radius: 10px;
 }
 #aside h3{
     font-weight: 500;
@@ -28,16 +27,31 @@
 #aside input{
     width: 100%;
     padding: 10px;
+    background-color: #c3e2e7;
+    border: solid 2px #eee;
+    
 }
-#aside button{
-    position: absolute;
-    bottom: 0;
-    padding: 10px;
+
+#aside button {
     width: 100%;  
+    bottom: 0;
+    position: absolute;
+	background-color:#c3e2e7;
+    border:2px solid #eee;
+    padding: 10px;
+    margin-bottom:40px ;
+
 }
+#aside button:hover {
+	background-color:#8fdbe9;
+}
+
 #aside select{
     padding: 10px;
     font-size: large;
+    background-color: #c3e2e7;
+    border: solid 2px #eee;
+    margin-top: 10px;
 }
 /* compenente principal */
 #principal{
@@ -49,5 +63,13 @@
     flex: 1;
 }
 #principal h2{
+    font-size: 50px;
     margin: 10px;
+    text-decoration: underline;
+}
+#principal img{
+    border: solid 2px #c3e2e7;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
 }

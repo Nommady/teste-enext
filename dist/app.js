@@ -2,24 +2,22 @@ root = document.getElementById('aside')
 
 axios.get('https://dog.ceo/api/breeds/list/all')
     .then(resp => {
-        let racas = resp.data.message
-
+        let dados = resp.data.message
+        racas = (Object.keys(dados))
+      
         let selectRacas = document.createElement('select')
         selectRacas.id = "racas"
         selectRacas.classList.add('racas')
-        // for (let i = 0; i < racas.length; i++) {
-        //     opcao = document.createElement('option')
-        //     opcao.value = `Raça ${raca[i]}`
-        //     let itemDaLista = raca[i]
-        //     opcao.innerText = itemDaLista
-        //     selectRacas.append(opcao)
-        // }
-        opcao =document.createElement('option')
-        raca = 'Hound'
-        opcao.innerText = raca
-        selectRacas.append(opcao)
+
+        for (let i = 0; i < racas.length; i++) {
+            opcao = document.createElement('option')
+            opcao.value = `Raça ${racas[i]}`
+            let itemDaLista = racas[i]
+            opcao.innerText = itemDaLista
+            selectRacas.append(opcao)
+        }
         root.append(selectRacas)
-        
+
     })
 
 //trecho para seleção de cores
